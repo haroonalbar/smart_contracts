@@ -21,11 +21,9 @@ contract SimpleStorage {
         return favoriteNumber;
     }
 
+    //calldata=>temperory cant modify , memory=>temperory , storage=>permanant
+
     function addPerson(string memory _name, uint256 _favoriteNumber) public {
-        People memory newPerson = People({
-            favoriteNumber: _favoriteNumber,
-            name: _name
-        });
-        people.push(newPerson);
+        people.push(People(_favoriteNumber, _name));
     }
 }
