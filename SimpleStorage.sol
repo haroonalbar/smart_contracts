@@ -22,7 +22,8 @@ contract SimpleStorage {
     }
 
     //calldata=>temperory cant modify , memory=>temperory , storage=>permanant
-
+    // can only be used for {array struct or mapping}  specialtypes
+    // string is an array of bytes
     function addPerson(string memory _name, uint256 _favoriteNumber) public {
         people.push(People(_favoriteNumber, _name));
     }
