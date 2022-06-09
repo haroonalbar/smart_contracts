@@ -2,7 +2,7 @@
 pragma solidity 0.8.8;
 
 contract SimpleStorage {
-    uint256 public favoriteNumber;
+    uint256 favoriteNumber;
 
     //making an array for people
     People[] public people;
@@ -19,5 +19,9 @@ contract SimpleStorage {
     //view and pure doesn't need gas to run
     function retrieve() public view returns (uint256) {
         return favoriteNumber;
+    }
+
+    function addPerson(string memory _name, uint256 _favoriteNumber) public {
+        people.push(People(_favoriteNumber, _name));
     }
 }
