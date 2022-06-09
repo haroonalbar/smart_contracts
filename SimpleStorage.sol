@@ -4,7 +4,8 @@ pragma solidity 0.8.8;
 contract SimpleStorage {
     uint256 public favoriteNumber;
 
-    People public person = People({favoriteNumber: 10, name: "haroon"});
+    //making an array for people
+    People[] public people;
 
     struct People {
         uint256 favoriteNumber;
