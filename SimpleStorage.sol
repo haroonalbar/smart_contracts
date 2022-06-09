@@ -8,6 +8,7 @@ contract SimpleStorage {
         favoriteNumber = _favoriteNumber;
     }
 
+    //view and pure doesn't need gas to run
     function retrieve() public view returns (uint256) {
         return favoriteNumber;
     }
